@@ -170,7 +170,7 @@ final class StaticWordLibrary extends WordLibrary {
    	  int[] s=new int[str.length()];
    	  for(int i=0;i<str.length();i++){s[i]=-1;}
    	  
-   	//文字を並べ替える
+   	  //文字を並べ替える
    	  for(int i=0;i<str.length();i++){
    	  Random ran=new Random();
    	  int run = ran.nextInt(str.length());//str.length()＝文字数
