@@ -159,7 +159,7 @@ final class StaticWordLibrary extends WordLibrary {
       String str = WORD_LIST[idx];
    	  String[] strArray = new String[str.length()];
    	  for (int i = 0; i < str.length(); i++) {
-   	  // strの先頭から1文字ずつString型にして取り出す
+   	  //strの先頭から1文字ずつString型にして取り出す
    	  String str2 = String.valueOf(str.charAt(i));
    	  // 配列に順番に格納する
    	  strArray[i] = str2;
