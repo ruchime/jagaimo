@@ -37,10 +37,10 @@ package com.toy.anagrams.lib;
 final class StaticWordLibrary extends WordLibrary {
 
     private static final String[] WORD_LIST = {
-        "abstraction",
-        "ambiguous",
-        "arithmetic",
-        "backslash",
+        "meet",
+        "have",
+        "glass",
+        "static",
         "bitmap",
         "circumstance",
         "combination",
@@ -84,10 +84,10 @@ final class StaticWordLibrary extends WordLibrary {
         "traditional"};
 
     private static final String[] SCRAMBLED_WORD_LIST = {
-        "batsartcoin",
-        "maibuguos",
-        "ratimhteci",
-        "abkclssha",
+        "etem",
+        "vahe",
+        "lasgs",
+        "tastci",
         "ibmtpa",
         "iccrmutsnaec",
         "ocbmnitaoni",
