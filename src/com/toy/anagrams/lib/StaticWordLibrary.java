@@ -31,6 +31,8 @@
 
 package com.toy.anagrams.lib;
 
+import java.util.Random;
+
 /**
  * Implementation of the logic for the Anagram Game application.
  */
@@ -82,7 +84,7 @@ final class StaticWordLibrary extends WordLibrary {
         "vertex",
         "unsigned",
         "traditional"};
-
+/*
     private static final String[] SCRAMBLED_WORD_LIST = {
         "etem",
         "vahe",
@@ -130,7 +132,7 @@ final class StaticWordLibrary extends WordLibrary {
         "nuisngde",
         "rtdatioialn"
     };
-    
+ */   
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
     /**
@@ -154,7 +156,34 @@ final class StaticWordLibrary extends WordLibrary {
      * @return word at that index in its scrambled form
      */
     public String getScrambledWord(int idx) {
-        return SCRAMBLED_WORD_LIST[idx];
+      String str = WORD_LIST[idx];
+   	  String[] strArray = new String[str.length()];
+   	  for (int i = 0; i < str.length(); i++) {
+   	  //strの先頭から1文字ずつString型にして取り出す
+   	  String str2 = String.valueOf(str.charAt(i));
+   	  // 配列に順番に格納する
+   	  strArray[i] = str2;
+   	  }
+   	  String[] C = new String[str.length()];
+   	  
+   	  //ランダムで選んでない数字を最初に-1と置く
+   	  int[] s=new int[str.length()];
+   	  for(int i=0;i<str.length();i++){s[i]=-1;}
+   	  
+   	  //文字を並べ替える
+   	  for(int i=0;i<str.length();i++){
+   	  Random ran=new Random();
+   	  int run = ran.nextInt(str.length());//str.length()＝文字数
+   	  if(i ==0){C[i]=strArray[run];s[run]=1;}
+   	  else if(i!=0&&s[run]==-1){C[i]=strArray[run]; s[run]=1;//i回目と、i回目よりも前にランダムの数字が被ってなければおっけ
+   	  }else{i=i-1;}//i回目と、i回目よりも前が被ってたらもう一回
+   	  }
+   	  
+   	  String fullName=" ";
+	  for (int i = 0; i < str.length(); i++) {
+	      fullName = C[i].concat(fullName);//ランダムにした文字をつなげる
+	  }
+        return fullName;
     }
 
     /**
